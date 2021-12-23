@@ -5,7 +5,11 @@ const color = docment.querySelector(".color");
 
 btn.addEventListener('click', function(){
     //get random numbr between 0-3
-    const randomNumber = 2;
+    const randomNumber = getRandomNum();
     document.body.style.backgroundColor = colors[randomNumber];
     color.textContent = colors[randomNumber];
 });
+
+function getRandomNum(){
+    return Math.random();
+}
