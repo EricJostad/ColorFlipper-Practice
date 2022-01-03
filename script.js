@@ -1,15 +1,15 @@
-const colors = ['green','red','rgba(133,122,200)',
-'#f15025'];
+const colors = ['green', 'red', 'rgba(133,122,200)',
+    '#f15025'];
 const btn = document.getElementById("btn");
 const color = docment.querySelector(".color");
 
-btn.addEventListener('click', function(){
+btn.addEventListener('click', function () {
     //get random numbr between 0-3
     const randomNumber = getRandomNum();
     document.body.style.backgroundColor = colors[randomNumber];
     color.textContent = colors[randomNumber];
 });
 
-function getRandomNum(){
-    return Math.random();
+function getRandomNum() {
+    return Math.floor(Math.random() * colors.length);
 }
