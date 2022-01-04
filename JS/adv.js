@@ -4,5 +4,14 @@ const btn = document.getElementById('btn');
 const color = document.querySelector('.color');
 
 btn.addEventListener('click', function () {
-
+    let hexColor = '#';
+    for (let i = 0; i < 6; i++) {
+        hexColor += adv[getRandomNum()];
+    }
+    color.textContent = hexColor;
+    document.body.style.backgroundColor = hexColor;
 })
+
+function getRandomNum() {
+    return Math.floor(Math.random() * adv.length);
+}
